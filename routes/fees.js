@@ -28,8 +28,6 @@ router.route('/bal').post(async (req, res) => {
     });
   res.json(balance.value());
 });
-
-
 router.route('/five').post(async (req, res) => {
   console.log(req.body);
   const client = Client.forTestnet();
