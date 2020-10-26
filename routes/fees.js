@@ -59,8 +59,8 @@ router.route('/fiveh').post(async (req, res) => {
   console.log(req.body.message);
   receipt = await (
     await new CryptoTransferTransaction()
-      .addSender('0.0.59314', 50000000000)
-      .addRecipient(req.body.account, 50000000000)
+      .addSender('0.0.59314', 10000000000)
+      .addRecipient(req.body.account, 10000000000)
       .build(HederaClient)
       .execute(HederaClient)
   ).getReceipt(HederaClient);
@@ -72,8 +72,8 @@ router.route('/tenh').post(async (req, res) => {
   console.log(req.body.message);
   receipt = await (
     await new CryptoTransferTransaction()
-      .addSender('0.0.59314', 100000000000)
-      .addRecipient(req.body.account, 100000000000)
+      .addSender('0.0.59314', 20000000000)
+      .addRecipient(req.body.account, 20000000000)
       .build(HederaClient)
       .execute(HederaClient)
   ).getReceipt(HederaClient);
@@ -109,8 +109,8 @@ module.exports = router;
   router.route('/fiveh').post(async (req, res) => {
     console.log(req.body.message)
     receipt =await (await new CryptoTransferTransaction()
-    .addSender('0.0.49451', 50000000000)
-    .addRecipient(req.body.account, 50000000000)
+    .addSender('0.0.49451', 10000000000)
+    .addRecipient(req.body.account, 10000000000)
     .build(HederaClient)
     .execute(HederaClient))
     .getReceipt(HederaClient);
@@ -121,8 +121,8 @@ module.exports = router;
   router.route('/tenh').post(async (req, res) => {
     console.log(req.body.message)
     receipt =await (await new CryptoTransferTransaction()
-    .addSender('0.0.49451', 100000000000)
-    .addRecipient(req.body.account, 100000000000)
+    .addSender('0.0.49451', 20000000000)
+    .addRecipient(req.body.account, 20000000000)
     .build(HederaClient)
     .execute(HederaClient))
     .getReceipt(HederaClient);
